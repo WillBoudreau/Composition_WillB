@@ -12,9 +12,30 @@ namespace Composition_WillB
         {
             Console.WriteLine("Composition");
             Console.WriteLine();
+            
+            
+            //Declaration
+            //Instanstiation
+            Player player = new Player();   
+            Enemy enemy = new Enemy();
 
+            Console.WriteLine("Player Health: " + player.healthsys.health);
+            Console.WriteLine("Enemy health: " + enemy.healthsys.health);
+            
+            
+            player.healthsys.TakeDamage(5);
+            enemy.healthsys.TakeDamage(5);
+            
+            Console.WriteLine("Player Health: " + player.healthsys.health);
+            Console.WriteLine("Enemy health: " + enemy.healthsys.health);
 
-            Console.WriteLine("PRess nay key to quit");
+            player.healthsys.Heal(5);
+            enemy.healthsys.Heal(5);
+
+            Console.WriteLine("Player Health: " + player.healthsys.health);
+            Console.WriteLine("Enemy Health: " + enemy.healthsys.health);
+
+            Console.WriteLine("Press any key to quit");
             Console.WriteLine();
             Console.ReadKey(true);
         }

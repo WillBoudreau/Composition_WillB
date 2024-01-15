@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Composition_WillB
+{
+    internal class HealthSystem
+    {
+
+        public int health = 100;
+
+        public HealthSystem( int health)
+        {
+            this.health = health;
+        }
+        public void TakeDamage(int hp)
+        {
+            health -= hp;   
+        }
+        public void Heal(int hp) { health += hp; }
+    }
+}
